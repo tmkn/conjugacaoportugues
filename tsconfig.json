@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "build",
+        "sourceMap": true,
+        "target": "esnext",
+        "module": "commonjs"
+    },
+    "include": ["src", "tests"]
+
+}

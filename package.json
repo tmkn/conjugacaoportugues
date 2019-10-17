@@ -1,0 +1,27 @@
+{
+  "name": "conjugacaoportugues",
+  "version": "1.0.0",
+  "description": "os verbos mais usados em portugues",
+  "main": "index.js",
+  "repository": "https://github.com/tmkn/conjugacaoportugues.git",
+  "author": "tmkn",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch",
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@types/puppeteer": "^1.20.2",
+    "puppeteer": "^1.20.0"
+  }
+}
