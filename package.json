@@ -26,6 +26,8 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
     "@types/puppeteer": "^1.20.2",
     "next": "^9.1.1",
     "puppeteer": "^1.20.0",
