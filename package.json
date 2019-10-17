@@ -8,7 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "tsc --watch",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "dev:crawler": "tsc --watch",
     "test": "mocha",
     "test:watch": "mocha --watch"
   },
@@ -16,12 +19,17 @@
     "@types/chai": "^4.2.3",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.11.1",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
     "chai": "^4.2.0",
     "mocha": "^6.2.1",
     "typescript": "^3.6.4"
   },
   "dependencies": {
     "@types/puppeteer": "^1.20.2",
-    "puppeteer": "^1.20.0"
+    "next": "^9.1.1",
+    "puppeteer": "^1.20.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   }
 }
