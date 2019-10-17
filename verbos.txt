@@ -646,7 +646,6 @@ resumir
 instituir
 arder
 consultar
-doer
 derrotar
 encarregar
 formular
