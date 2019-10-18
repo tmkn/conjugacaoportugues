@@ -1,3 +1,6 @@
+import * as fs from "fs";
+import * as path from "path";
+import * as readline from "readline";
 import * as puppeteer from "puppeteer";
 
 const presente = "presente";
@@ -19,6 +22,19 @@ export interface ITempos {
 interface ICrawlResult {
     correctEncoding: boolean;
     conjugations: ITempos;
+}
+
+const verbList = "verbos.txt";
+
+export async function *verbs(): AsyncIterableIterator<string> {
+    const rl = readline.createInterface({
+        input: fs.createReadStream(verbList),
+        crlfDelay: Infinity
+    });
+
+    for await(const verb of rl) {
+        yield verb;
+    }
 }
 
 export function normalize(text: string): string {

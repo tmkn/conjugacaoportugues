@@ -1,21 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
-import * as readline from "readline";
-import { getUrl, crawl } from "./crawler";
+import { getUrl, crawl, verbs } from "./crawler";
 import { save, exists } from "./save";
-
-const verbList = "verbos.txt";
-
-async function *verbs(): AsyncIterableIterator<string> {
-    const rl = readline.createInterface({
-        input: fs.createReadStream(verbList),
-        crlfDelay: Infinity
-    });
-
-    for await(const verb of rl) {
-        yield verb;
-    }
-}
 
 (async () => {
     let i = 1;
