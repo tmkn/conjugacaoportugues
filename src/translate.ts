@@ -24,7 +24,7 @@ async function crawl(url: string): Promise<ICrawlResult> {
             request.continue();
         }
     });
-
+    await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36");
     await page.goto(url);
 
     let result: ICrawlResult = await page.evaluate(parse);
@@ -79,12 +79,14 @@ function translationExists(verb: string): boolean {
                     save(verb, translations);
                     console.log(`[${i.toString().padStart(4)}]`, failedVerbs.length, `Fetched: ${verb}`);
                 }
+
+                //await new Promise(resolve => setTimeout(() => resolve(), 15000));
             }
     
             ++i;
     
-            if(i > 2)
-                break;
+            /*if(i > 2)
+                break;*/
         }
         catch(e) {
             console.log(e);
